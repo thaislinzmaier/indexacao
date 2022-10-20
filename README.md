@@ -1,4 +1,4 @@
-# indexacao
+# Organização sequencial-indexada
 Repositório do projeto da disciplina de Algoritmos e Estruturas de Dados 2 em 2022/4
 
 
