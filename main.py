@@ -1,18 +1,7 @@
 from index_campo_pri_livros import *
 from index_campo_pri_reviews import *
 from index_campo_sec_livros import *
-
-
-#---------------------------#
-#pesquisa_sequencial_indexado()
-#index_campo_sec_reviews()
-#pesquisa_index_campo_sec()
-#index_campo_terc_livros()
-#index_campo_terc_reviews()
-#pesquisa_index_campo_terc()
-#index_campo_qua_livros()
-#index_campo_qua_reviews()
-#pesquisa_index_campo_qua()
+from pesquisa_arquivos import *
 
 
 if __name__ == '__main__':
@@ -32,4 +21,17 @@ if __name__ == '__main__':
     if opcao == '2':
         index_campo_sec_livros()
     if opcao == '3':
-        pesquisa_arquivos()
+        print("Escolha o que quer pesquisar:")
+        print("1 - TOP 10 livros mais bem avaliados")
+        print("2 - TOP 10 livros mais mal avaliados")
+        print("3 - TOP 10 livros com mais avaliações")
+        print("4 - TOP 10 editoras com mais avaliações")
+        print("5 - TOP 10 autores com mais avaliações")
+        opcao_int = input()
+        if opcao_int == '1':
+            print("Localizando os 10 livros mais bem avaliados, por favor aguarde!")
+            top10()
+        if opcao_int == '2':
+            print("Localizando os 10 livros mais mal avaliados, por favor aguarde!")
+            top10_piores()
+
