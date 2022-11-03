@@ -2,7 +2,8 @@ from index_campo_pri_livros import *
 from index_campo_pri_reviews import *
 from index_campo_sec_livros import *
 from pesquisa_arquivos import *
-
+from pesquisa_memoria import *
+from arvore import *
 
 if __name__ == '__main__':
 
@@ -24,9 +25,6 @@ if __name__ == '__main__':
         print("Escolha o que quer pesquisar:")
         print("1 - TOP 10 livros mais bem avaliados")
         print("2 - TOP 10 livros mais mal avaliados")
-        print("3 - TOP 10 livros com mais avaliações")
-        print("4 - TOP 10 editoras com mais avaliações")
-        print("5 - TOP 10 autores com mais avaliações")
         opcao_int = input()
         if opcao_int == '1':
             print("Localizando os 10 livros mais bem avaliados, por favor aguarde!")
@@ -34,4 +32,17 @@ if __name__ == '__main__':
         if opcao_int == '2':
             print("Localizando os 10 livros mais mal avaliados, por favor aguarde!")
             top10_piores()
-
+    if opcao == '4':
+        print("Escolha o que quer pesquisar:")
+        print("1 - TOP 10 livros mais bem avaliados")
+        print("2 - TOP 10 livros mais mal avaliados")
+        opcao_int = input()
+        if opcao_int == '1':
+            print("Localizando os 10 livros mais bem avaliados, por favor aguarde!")
+            top10_mem()
+        if opcao_int == '2':
+            print("Localizando os 10 livros mais mal avaliados, por favor aguarde!")
+            top10_piores_mem()
+    if opcao == '5':
+        print("TOP 10 autores com mais avaliações")
+        cria_arquivo()

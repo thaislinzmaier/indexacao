@@ -8,7 +8,7 @@ import csv, sys
 def has_numbers(inputString):
         return any(char.isdigit() for char in inputString)
 
-def top10():
+def top10_mem():
     maxInt = sys.maxsize
     while True:
         try:
@@ -57,7 +57,7 @@ def top10():
         print(i)
             
 
-def top10_piores():    
+def top10_piores_mem():    
     maxInt = sys.maxsize
     while True:
         try:

@@ -71,6 +71,8 @@ def top10_piores():
     arquivo_top_10_piores = r'G:\Meu Drive\Ciência da Computação\2022 4\Algoritmos e Estrutura de Dados 2\Trabalho\arquivos\top_10_piores.csv'
     arquivo_top_10_piores_ordenado = r'G:\Meu Drive\Ciência da Computação\2022 4\Algoritmos e Estrutura de Dados 2\Trabalho\arquivos\top_10_piores_ordenado.csv'
     arquivo_lista_piores_livros = r'G:\Meu Drive\Ciência da Computação\2022 4\Algoritmos e Estrutura de Dados 2\Trabalho\arquivos\top_10_piores_livros.csv'
+    arquivo_livros_mal_avaliados = r'G:\Meu Drive\Ciência da Computação\2022 4\Algoritmos e Estrutura de Dados 2\Trabalho\arquivos\top_10_piores_livros_titulos.csv'
+
 
 
     with open(arquivo, encoding='utf-8') as arq:
@@ -132,10 +134,17 @@ def top10_piores():
             pesq_chave = 'Chave'
             chave = "{:<20}".format(pesq_chave)
             data2 = csv.DictReader(arq)
-            for i in data1:
-                for j in data2:
-                    if i[chave] == j[chave]:
-                        print(i[titulo])
+            with open(arquivo_livros_mal_avaliados, 'w', encoding='utf-8') as alma:             
+                lista_chaves = []
+                for i in data2:
+                    lista_chaves.append(i[chave])
+                for j in data1:
+                    for i in lista_chaves:
+                        if i == j[chave]:
+                            alma.write(j[titulo])
+                            alma.write('\n')
+                        
+                        
     
  
     
